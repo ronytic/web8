@@ -27,6 +27,21 @@ class Welcome extends CI_Controller
 
 	public function saludar()
 	{
-		echo "TE ESTOY SALUDANDO";
+		// echo "TE ESTOY SALUDANDO";
+
+		$this->load->helper('url');
+
+
+		$datos = [
+			'nombres' => "Jose Luis",
+			'apellido' => "Perez"
+		];
+
+		$this->load->view('saludar', $datos);
+	}
+
+	public function despedir()
+	{
+		echo "NOS VEMOS CHAUU";
 	}
 }
